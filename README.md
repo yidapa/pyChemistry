@@ -11,13 +11,15 @@ python setup.py install
 This installs all appropriate files that are required to use this library and sets everything up for you.
 Examples:
 ```python
-import chemlib
+import pyChem
 
 element = "C"
-mm = chemlib.getMolarMass(element)
-name = chemlib.getName(element)
-an = chemlib.getAtomicNumber(element)
-print "{0} has a molar mass of {1} and atomic number of {2}".format(name, mm, an)
+mm = pyChem.getMolarMass(element)
+name = pyChem.getName(element)
+an = pyChem.getAtomicNumber(element)
+ec = pyChem.getElectronConfiguration(element)
+ecfngn = pyChem.getNobleGasElectronConfiguration()
+print "{0} has a molar mass of {1} and atomic number of {2} and an electron configuration of {3} with the noble gas notation of the electron configuration being {4}”.format(name, mm, an, ec, ecfngn)
 ```
 ```python
 compound = "C6H12O6" # glucose if you didn't know already
